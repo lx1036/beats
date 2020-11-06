@@ -22,7 +22,10 @@ import (
 
 	"github.com/elastic/beats/v7/filebeat/cmd"
 	inputs "github.com/elastic/beats/v7/filebeat/input/default-inputs"
+	_ "github.com/elastic/beats/v7/libbeat/processors/add_qihoo_metadata"
 )
+
+// go run . -e -c /Users/liuxiang/Code/360/k8s/beats/filebeat/filebeat-demo.yml
 
 // The basic model of execution:
 // - input: finds files in paths/globs to harvest, starts harvesters

@@ -1,0 +1,23 @@
+{
+    "@timestamp": "2020-11-05T09:47:36.498Z",
+    "@metadata": {
+        "beat": "filebeat",
+        "type": "doc",
+        "version": "6.3.1",
+        "topic": "k8s_docker_astro-so-com-production"
+    },
+    "log": "10.213.130.160\t120.198.216.249,224.3.6.0\t120.198.216.249\t-\t[2020-11-05T17:47:35+08:00]\t\"POST /api/v1/zhougongjiemeng HTTP/1.1\"\t200\t598\t\"https://astro.so.com/jiemeng/search?name=%E5%8D%87%E8%81%8C\"\t\"Mozilla/5.0 (Linux; Android 10; Redmi K30 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.145 Mobile Safari/537.36 360 Aphone Browser (9.1.1.003) GopSupport mso_sdk(1.0.0)\"\t\"-\"\t0.040\t0.040\t1900\thttp\tastro.so.com\t80\n",
+    "deployment": "astro-so-com-production",
+    "cluster": "shyc2",
+    "controller_kind": "deployment",
+    "container_name": "nginx",
+    "source": "/var/log/containers/astro-so-com-production-74b89b7f89-72cr4_default_nginx-e05fb00f0e6b57a27bfc9fc27a8e5d2575ca8e80d28bd040c668f2640f6bf826.log",
+    "type": "k8s-log",
+    "stream": "stdout",
+    "time": "2020-11-05T09:47:35.550802372Z",
+    "topic": "k8s_docker_astro-so-com-production",
+    "namespace": "default",
+    "hostname": "docker4163.se.shyc2.qihoo.net",
+    "app": "astro-so-com-production",
+    "pod": "astro-so-com-production-74b89b7f89-72cr4"
+}

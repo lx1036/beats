@@ -1,0 +1,23 @@
+{
+    "@timestamp": "2020-11-05T10:52:20.382Z",
+    "@metadata": {
+        "beat": "filebeat",
+        "type": "doc",
+        "version": "6.3.1",
+        "topic": "k8s_docker_astro-so-com-production"
+    },
+    "namespace": "default",
+    "type": "k8s-log",
+    "hostname": "docker4143.se.shyc2.qihoo.net",
+    "controller_kind": "deployment",
+    "topic": "k8s_docker_astro-so-com-production",
+    "time": "2020-11-05T10:52:18.613396937Z",
+    "deployment": "astro-so-com-production",
+    "cluster": "shyc2",
+    "log": "{\"latency\":1,\"level\":\"info\",\"method\":\"GET\",\"msg\":\"[app level]prometheus access logger\",\"path\":\"/api/v1/cube\",\"status\":200,\"time\":\"2020-11-05T18:52:18+08:00\"}\n",
+    "app": "astro-so-com-production",
+    "container_name": "golang",
+    "source": "/var/log/containers/astro-so-com-production-74b89b7f89-z6mjz_default_golang-085bedda03ee4b47f2cd56af8dd74a5d93e29d8bc9f85500878df1874c06e1e0.log",
+    "stream": "stdout",
+    "pod": "astro-so-com-production-74b89b7f89-z6mjz"
+}

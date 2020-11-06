@@ -1,0 +1,35 @@
+{
+    "@timestamp":"2020-11-02T08:26:02.079Z",
+    "@metadata":{
+        "beat":"filebeat",
+        "type":"_doc",
+        "version":"7.6.2"
+    },
+    "log":{
+        "file":{
+            "path":"/data/docker/containers/ce4ce3d2c5430da7ebb31adf2a3845d36787ab3294ae0f9c79d0ff00aacb82a7/ce4ce3d2c5430da7ebb31adf2a3845d36787ab3294ae0f9c79d0ff00aacb82a7-json.log"
+        },
+        "offset":21320
+    },
+    "message":"{"log":"10.203.230.48\u0009222.74.164.78,224.3.6.0\u0009222.74.164.78\u0009-\u0009[2020-11-02T16:26:01+08:00]\u0009\"GET /favicon.ico HTTP/1.1\"\u0009200\u000915086\u0009\"https://astro.so.com/xingzuo/shuangyu?src=onebox_astro_jianjie\"\u0009\"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE/12.2.1606.0\"\u0009\"-\"\u0009-\u00090.000\u00091109\u0009http\u0009astro.so.com\u000980\n","stream":"stdout","time":"2020-11-02T08:26:01.380277608Z"}",
+"input":{
+"type":"log"
+},
+"fields":{
+"log_topic":"k8s_docker_astro-so-com-online-production",
+"app_field":"IDC=,AppName=astro-so-com-online-production,PodName=astro-so-com-online-production-859f48f9b6-9ksmz"
+},
+"agent":{
+"type":"filebeat",
+"ephemeral_id":"0f61acf1-cc81-42c6-a99f-f583e344c70d",
+"hostname":"log-controller-daemonset-knlzc",
+"id":"3b7e2759-1f8d-477f-b5e4-f7b7ec270bd5",
+"version":"7.6.2"
+},
+"ecs":{
+"version":"1.4.0"
+},
+"host":{
+"name":"log-controller-daemonset-knlzc"
+}
+}

@@ -105,6 +105,8 @@ func (f *decodeJSONFields) Run(event *beat.Event) (*beat.Event, error) {
 
 	for _, field := range f.fields {
 		data, err := event.GetValue(field)
+
+
 		if err != nil && errors.Cause(err) != common.ErrKeyNotFound {
 			f.logger.Debugf("Error trying to GetValue for field : %s in event : %v", field, event)
 			errs = append(errs, err.Error())
@@ -124,6 +126,7 @@ func (f *decodeJSONFields) Run(event *beat.Event) (*beat.Event, error) {
 			errs = append(errs, err.Error())
 			continue
 		}
+
 
 		target := field
 		if f.target != nil {
@@ -153,6 +156,8 @@ func (f *decodeJSONFields) Run(event *beat.Event) (*beat.Event, error) {
 			}
 		}
 
+
+
 		if err != nil {
 			f.logger.Debugf("Error trying to Put value %v for field : %s", output, field)
 			errs = append(errs, err.Error())
@@ -165,11 +170,18 @@ func (f *decodeJSONFields) Run(event *beat.Event) (*beat.Event, error) {
 			}
 			event.Meta[events.FieldMetaID] = id
 		}
+
+		//fmt.Println(data)
 	}
 
 	if len(errs) > 0 {
 		return event, fmt.Errorf(strings.Join(errs, ", "))
 	}
+
+
+	//fmt.Println(event.Fields.String())
+
+
 	return event, nil
 }
 

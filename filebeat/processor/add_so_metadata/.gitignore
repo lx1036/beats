@@ -1,0 +1,5 @@
+*.json
+*_test.go
+tmp
+*.yaml
+add_so_metadata.go

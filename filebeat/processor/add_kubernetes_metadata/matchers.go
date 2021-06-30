@@ -84,9 +84,11 @@ const podUIDPos = 5
 func (f *LogPathMatcher) MetadataIndex(event common.MapStr) string {
 	value, err := event.GetValue("log.file.path")
 	if err == nil {
+		// /data/docker/containers/2652f35b48dff481d891314226bc285134fe91b011b5269a0f22bf061a209909/2652f35b48dff481d891314226bc285134fe91b011b5269a0f22bf061a209909-json.log"
 		source := value.(string)
 		f.logger.Debugf("Incoming log.file.path value: %s", source)
 
+		// LogsPath = /data/docker/containers
 		if !strings.Contains(source, f.LogsPath) {
 			f.logger.Errorf("Error extracting container id - source value does not contain matcher's logs_path '%s'.", f.LogsPath)
 			return ""
@@ -112,6 +114,8 @@ func (f *LogPathMatcher) MetadataIndex(event common.MapStr) string {
 		} else {
 			// In case of the Kubernetes log path "/var/log/containers/",
 			// the container ID will be located right before the ".log" extension.
+
+			// LogsPath = /data/docker/containers
 			if strings.HasPrefix(f.LogsPath, containerLogsPath()) && strings.HasSuffix(source, ".log") && sourceLen >= containerIdLen+4 {
 				containerIDEnd := sourceLen - 4
 				cid := source[containerIDEnd-containerIdLen : containerIDEnd]

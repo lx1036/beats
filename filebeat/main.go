@@ -24,6 +24,8 @@ import (
 	inputs "github.com/elastic/beats/v7/filebeat/input/default-inputs"
 )
 
+// go run . -e -c ./filebeat-demo.yml
+
 // The basic model of execution:
 // - input: finds files in paths/globs to harvest, starts harvesters
 // - harvester: reads a file, sends events to the spooler

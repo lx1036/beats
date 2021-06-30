@@ -104,7 +104,8 @@ func New(cfg *common.Config) (processors.Processor, error) {
 
 	// complete processor's initialisation asynchronously so as to re-try on failing k8s client initialisations in case
 	// the k8s node is not yet ready.
-	go processor.init(config, cfg)
+	//go processor.init(config, cfg)
+	processor.init(config, cfg)
 
 	return processor, nil
 }
